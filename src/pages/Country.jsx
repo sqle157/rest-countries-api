@@ -1,16 +1,16 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { fetchCountryByFullName, fetchCountryByCode } from '../context/country/CountryAction';
-import CountryContext from '../context/country/CountryContext';
+// import CountryContext from '../context/country/CountryContext';
 import { FaArrowLeft } from 'react-icons/fa';
 import Spinner from '../components/Spinner';
 
 function Country() {
-	// const [country, setCountry] = useState({});
+	const [country, setCountry] = useState({});
 	const [borderList, setBorderList] = useState([]);
 	const [error, setError] = useState(false);
-	// const [loading, setLoading] = useState(true);
-	const { country, loading, dispatch } = useContext(CountryContext);
+	const [loading, setLoading] = useState(true);
+	// const { country, loading, dispatch } = useContext(CountryContext);
 
 	const params = useParams();
 
@@ -18,7 +18,7 @@ function Country() {
 	// The fetch will always fail in the first load, but it will work normally after reloading
 	// I couldn't figure out why, so I have to return to normal useState management
 	useEffect(() => {
-		dispatch({ type: 'SET_LOADING' });
+		// dispatch({ type: 'SET_LOADING' });
 		const getCountryData = async () => {
 			try {
 				const countryData = await fetchCountryByFullName(params.country);
@@ -29,8 +29,9 @@ function Country() {
 					setBorderList((prevState) => Array.from(new Set([...prevState, name])));
 				});
 
-				dispatch({ type: 'GET_COUNTRY', payload: countryData[0] });
-				// setLoading(false);
+				// dispatch({ type: 'GET_COUNTRY', payload: countryData[0] });
+				setCountry(countryData[0]);
+				setLoading(false);
 			} catch {
 				// Handle error when return 404
 				setError(true);
@@ -38,7 +39,7 @@ function Country() {
 		};
 
 		getCountryData();
-	}, [params.country, dispatch]);
+	}, [params.country]);
 
 	// console.log(country);
 

@@ -6,12 +6,12 @@ const countryReducer = (state, action) => {
 				countries: action.payload,
 				loading: false,
 			};
-		case 'GET_COUNTRY':
-			return {
-				...state,
-				country: action.payload,
-				loading: false,
-			};
+		// case 'GET_COUNTRY':
+		// 	return {
+		// 		...state,
+		// 		country: action.payload,
+		// 		loading: false,
+		// 	};
 		case 'SET_LOADING':
 			return {
 				...state,

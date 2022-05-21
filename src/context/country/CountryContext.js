@@ -6,7 +6,7 @@ const CountryContext = createContext();
 export const CountryProvider = ({ children }) => {
 	const initialState = {
 		countries: [],
-		country: {},
+		// country: {},
 		loading: true,
 	};
 
