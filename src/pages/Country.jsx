@@ -19,6 +19,7 @@ function Country() {
 	// I couldn't figure out why, so I have to return to normal useState management
 	useEffect(() => {
 		// dispatch({ type: 'SET_LOADING' });
+		setBorderList([]);
 		const getCountryData = async () => {
 			try {
 				const countryData = await fetchCountryByFullName(params.country);
