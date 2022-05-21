@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.header {
+	background-color: hsl(var(--clr-neutral-base));
+	padding-block: 1.5rem;
+	margin-bottom: 3rem;
+
+	@include mq(medium) {
+		margin-bottom: 2.5rem;
+	}
+
+	&-container {
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.theme-switcher {
+	--gap: 0.5rem;
+	cursor: pointer;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+	color: hsl(var(--clr-neutral-text));
+
+	> span {
+		font-weight: var(--fw-600);
+	}
+}
+
+.moon-icon {
+	fill: #000000;
+}

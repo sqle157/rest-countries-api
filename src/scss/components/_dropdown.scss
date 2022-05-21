@@ -1,0 +1,42 @@
+.arrow {
+	fill: hsl(var(--clr-neutral-text));
+}
+
+.select {
+	&-group {
+		position: relative;
+		font-size: var(--fs-300);
+		line-height: var(--line-height-4);
+		box-shadow: 0 0 3px 3px rgb(0 0 0 / 3%);
+	}
+
+	&-btn {
+		--gap: 3rem;
+		cursor: pointer;
+		align-items: center;
+		padding: 1.125rem 1.125rem 1.125rem 1.5rem;
+		border: none;
+		color: hsl(var(--clr-neutral-text));
+		background-color: hsl(var(--clr-neutral-base));
+	}
+
+	&-dropdown {
+		--gap: 0rem;
+		position: absolute;
+		width: 100%;
+		margin-top: 4px;
+		background-color: hsl(var(--clr-neutral-base));
+		flex-direction: column;
+		padding-block: 0.75rem;
+	}
+
+	&-item {
+		cursor: pointer;
+		padding: 0.25rem 1.5rem;
+
+		&:hover,
+		&:focus {
+			background-color: hsl(var(--clr-neutral-text) / 0.5);
+		}
+	}
+}

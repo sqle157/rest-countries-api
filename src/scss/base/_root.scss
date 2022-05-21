@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+:root {
+	@each $property, $shade in $colors {
+		--clr-neutral-#{$property}: #{$shade};
+	}
+
+	@each $size, $value in $type-scale {
+		--fs-#{$size}: #{$value};
+	}
+
+	@each $font-weight in $font-weights {
+		--fw-#{$font-weight}: #{$font-weight};
+	}
+
+	@each $prop, $value in $line-heights {
+		--line-height-#{$prop}: #{$value};
+	}
+
+	--ff-primary: #{$font-family};
+}
