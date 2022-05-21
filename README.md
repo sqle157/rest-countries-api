@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/sqle157/rest-countries-api)
-- Live Site URL: [Live Demo](https://rest-countries-ris2cpya0-sqle157.vercel.app/)
+- Live Site URL: [Live Demo](https://rest-countries-ds0ui2z03-sqle157.vercel.app/)
 
 ### What I learned
 
