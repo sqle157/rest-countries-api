@@ -33,7 +33,7 @@
 	&-item {
 		cursor: pointer;
 		padding: 0.25rem 1.5rem;
-
+		-webkit-appearance: none;
 		&:hover,
 		&:focus {
 			background-color: hsl(var(--clr-neutral-text) / 0.5);

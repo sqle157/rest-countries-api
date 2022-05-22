@@ -4,11 +4,11 @@
 	&-container {
 		--gap: 5rem;
 		flex-direction: column;
-		padding-top: 2rem;
+		padding-block: 2rem 3.875rem;
 
 		@include mq(medium) {
 			--gap: 4rem;
-			padding: 0;
+			padding-block: 0 3.875rem;
 		}
 	}
 
@@ -23,6 +23,8 @@
 	}
 
 	&-flag-block {
+		border-radius: 0.5rem;
+		overflow: hidden;
 		box-shadow: 0 0 3px 3px rgb(0 0 0 / 3%);
 
 		img {

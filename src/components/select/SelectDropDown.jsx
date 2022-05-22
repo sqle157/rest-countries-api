@@ -13,7 +13,7 @@ function SelectDropDown({ setDropDown }) {
 
 	const handleOnClick = async (e) => {
 		dispatch({ type: 'SET_LOADING' });
-		const countryData = await fetchCountryByRegion(e.target.value);
+		const countryData = await fetchCountryByRegion(e.target.dataset.value);
 		dispatch({ type: 'GET_COUNTRIES', payload: countryData });
 		setDropDown(false);
 	};
@@ -21,9 +21,9 @@ function SelectDropDown({ setDropDown }) {
 	return (
 		<div className='select-dropdown flex' ref={ref}>
 			{regions.map((region, index) => (
-				<option key={index} onClick={handleOnClick} className='select-item' value={region}>
+				<span key={index} onClick={handleOnClick} className='select-item' data-value={region}>
 					{region}
-				</option>
+				</span>
 			))}
 		</div>
 	);
