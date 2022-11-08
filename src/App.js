@@ -13,8 +13,8 @@ function App() {
 
 	return (
 		<>
-			<Header />
 			<Router>
+				<Header />
 				<main>
 					<div className='container'>
 						<Routes>

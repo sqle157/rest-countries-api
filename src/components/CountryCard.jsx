@@ -13,7 +13,8 @@ function CountryCard({ country }) {
 			<div className='country-info flex'>
 				<h2>{name}</h2>
 				<p className='info'>
-					<span className='category'>Population</span>: {population.toLocaleString()}
+					<span className='category'>Population</span>:{' '}
+					{population.toLocaleString()}
 				</p>
 				<p className='info'>
 					<span className='category'>Region</span>: {region}

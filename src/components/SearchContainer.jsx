@@ -1,15 +1,17 @@
-import { useContext } from 'react';
-import CountryContext from '../context/country/CountryContext';
+import { useCountryContext } from '../hooks/useCountryContext';
+import { fetchCountryByName } from '../api/CountryAction';
+// Icons & Components
 import { FaSearch } from 'react-icons/fa';
 import SelectGroup from './select/SelectGroup';
-import { fetchCountryByName } from '../context/country/CountryAction';
 
 function SearchContainer() {
-	const { dispatch } = useContext(CountryContext);
+	const { dispatch } = useCountryContext();
 
 	const handleOnChange = async (e) => {
-		const countryData = await fetchCountryByName(e.target.value);
-		dispatch({ type: 'GET_COUNTRIES', payload: countryData });
+		try {
+			const countryData = await fetchCountryByName(e.target.value);
+			dispatch({ type: 'GET_COUNTRIES', payload: countryData });
+		} catch (error) {}
 	};
 
 	return (
