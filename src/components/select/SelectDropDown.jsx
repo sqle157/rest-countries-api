@@ -24,13 +24,14 @@ function SelectDropDown({ setDropDown }) {
 	return (
 		<div className='select-dropdown flex' ref={ref}>
 			{regions.map((region, index) => (
-				<span
+				<button
 					key={index}
 					onClick={handleOnClick}
 					className='select-item'
-					data-value={region}>
+					data-value={region}
+					type='button'>
 					{region}
-				</span>
+				</button>
 			))}
 		</div>
 	);

@@ -10,7 +10,8 @@ function SelectGroup() {
 		<div className='select-group'>
 			<button
 				className='select-btn flex'
-				onClick={() => setDropDown((prevState) => !prevState)}>
+				onClick={() => setDropDown((prevState) => !prevState)}
+				type='button'>
 				Filter by Region
 				<FaAngleDown className='arrow' />
 			</button>

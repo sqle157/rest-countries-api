@@ -34,6 +34,11 @@
 		cursor: pointer;
 		padding: 0.25rem 1.5rem;
 		-webkit-appearance: none;
+		outline-color: transparent;
+		border: none;
+		text-align: start;
+		color: white;
+		background-color: transparent;
 		&:hover,
 		&:focus {
 			background-color: hsl(var(--clr-neutral-text) / 0.5);
